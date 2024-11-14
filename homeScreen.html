@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yay!</title>
+    <link rel="stylesheet" href="homeScreen.css">
+    <link rel="icon" href="../welcomeScreen/fries.png" type="image/x-icon">
+</head>
+<body>
+    <div class="homescreen">
+        <!-- "Envelope" image wrapper for center positioning -->
+        <div class="image-wrapper">
+            <div class="image" id="envelope">
+                <img src="envelopeImage.jpg" alt="Envelope Image">
+            </div>
+
+            <p class="birthday-text">💖💖💖Happy Monthsary💖💖💖</p>
+        </div>
+
+        <!-- Gallery Modal -->
+        <div id="gallery-modal" class="gallery-modal">
+            <span class="close-button" id="close-gallery">&times;</span>
+            <div class="gallery-container">
+                <img src="anime.jpg" alt="image 1" class="gallery-image">
+                <img src="heart.jpg" alt="image 2" class="gallery-image">
+                <img src="spaghetti.jpg" alt="image 3" class="gallery-image">
+                <img src="flower.jpg" alt="image 4" class="gallery-image">
+                <img src="chocolate.jpg" alt="image 5" class="gallery-image">
+                <img src="yourName.jpg" alt="image 6" class="gallery-image">
+                <img src="banana.jpg" alt="image 7" class="gallery-image">
+                <img src="panda.png" alt="image 8" class="gallery-image">
+                <img src="cookie.jpg" alt="image 9" class="gallery-image">
+                <img src="fries.png" alt="image 10" class="gallery-image">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+
+        <!-- Pop-up for Highlighted Image -->
+        <div id="image-popup" class="image-popup">
+            <div class="popup-content">
+                <span class="popup-close" id="close-popup">&times;</span>
+                <img id="popup-image" src="" alt="Highlighted Image" />
+                <p id="popup-text"></p>
+            </div>
+        </div>
+    </div>
+    <script src="homeScreen.js"></script>
+</body>
+</html>

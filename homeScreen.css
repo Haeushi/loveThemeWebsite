@@ -1,0 +1,160 @@
+/* Fullscreen and Desktop Background */
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.homescreen {
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpeg'); /* wallpaper image */
+    background-size: cover; /* Make the image cover the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    position: relative;
+}
+
+/* Wrapper to center the image */
+.image-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering for the wrapper */
+}
+
+/* Centered and Enlarged Image */
+.image {
+    width: 150px; /* Adjust as needed */
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.image img {
+    width: 350px; /* Keep image dimensions as desired */
+    height: 200px;
+    margin-bottom: 10px;
+    transition: transform 0.2s;
+}
+
+.image:hover img {
+    transform: scale(1.2); /* Enlarge icon slightly on hover */
+}
+
+/* Position specific */
+#envelope {
+    top: 50%; /* Centered on the page */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust position precisely to the center */
+}
+
+
+/* Style for the gallery modal */
+.gallery-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Style for the close button */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Style for the gallery images */
+.gallery-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 90%;
+    max-height: 80%;
+    overflow: auto;
+}
+
+.gallery-image {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+}
+
+/* Style for the pop-up modal */
+.image-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.styled-popup-text {
+    color: black;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.birthday-text {
+    font-size: 50px;           /* Large font size */
+    font-weight: bold;         /* Make it bold */
+    color: black;            /* Example color (pink) */
+    text-align: center;        /* Center align text */
+    position: absolute;        /* Position it absolutely */
+    bottom: -240px;              /* Adjust as needed to position below envelope */
+    left: 50%;                 /* Center horizontally */
+    transform: translateX(-50%); /* Center correctly with transform */
+    z-index: 10;               /* Ensure it's above other elements */
+}
